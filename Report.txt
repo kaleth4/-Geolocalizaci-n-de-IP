@@ -1,0 +1,135 @@
+# 🌍 **IPTracker - Geolocalización de IPs con IPinfo API**
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Licencia](https://img.shields.io/badge/Licencia-MIT-green.svg)](LICENSE)
+[![Versión](https://img.shields.io/badge/versión-1.0.0-brightgreen.svg)](https://github.com/tu-usuario/IPTracker/releases)
+
+---
+
+## 📌 **Descripción**
+
+**IPTracker** es una herramienta profesional de geolocalización de IPs que utiliza la API de [IPinfo](https://ipinfo.io/) para obtener información detallada sobre direcciones IP. Diseñado para ser robusto, eficiente y fácil de integrar en proyectos más grandes.
+
+✅ **Características clave:**
+- Consulta de IPs propias o externas (pasando como argumento).
+- Manejo avanzado de errores y timeouts.
+- Salida formateada y legible en terminal.
+- Integración con variables de entorno para tokens sensibles.
+- Arquitectura orientada a objetos para mayor reutilización.
+
+---
+
+## 🚀 **Instalación**
+
+### 1️⃣ **Requisitos previos**
+- Python 3.8+
+- `pip` (gestor de paquetes de Python)
+
+### 2️⃣ **Clonar el repositorio**
+```bash
+git clone https://github.com/tu-usuario/IPTracker.git
+cd IPTracker
+```
+
+### 3️⃣ **Instalar dependencias**
+```bash
+pip install -r requirements.txt
+```
+
+> **Nota:** El archivo `requirements.txt` incluye:
+> ```
+> ipinfo>=4.0.0
+> requests>=2.25.0
+> colorama>=0.4.4
+> python-dotenv>=0.19.0
+> ```
+
+---
+
+## ⚙️ **Configuración**
+
+### 1️⃣ **Obtener tu token de IPinfo**
+1. Regístrate en [IPinfo](https://ipinfo.io/) y obtén tu token gratuito (o de pago).
+2. Guarda el token en un archivo `.env` en la raíz del proyecto:
+   ```env
+   IPINFO_TOKEN=tu_token_aqui
+   ```
+   > **⚠️ Importante:** Nunca expongas tu token en el código. Usa variables de entorno o archivos `.env`.
+
+---
+
+## 💻 **Uso**
+
+### 1️⃣ **Ejecutar el script**
+```bash
+python ip_tracker.py [IP_OPCIONAL]
+```
+- **Sin argumentos:** Obtiene la IP pública de tu conexión actual.
+- **Con argumento:** Ejemplo: `python ip_tracker.py 8.8.8.8` (consulta Google DNS).
+
+### 2️⃣ **Ejemplo de salida**
+```bash
+[*] Extrayendo información de: 8.8.8.8
+
+Hostname      : dns.google
+City          : Mountain View
+Region        : California
+Country       : US
+Location      : 37.4056,-122.0775
+Postal        : 94043
+Timezone      : America/Los_Angeles
+ISP           : Google LLC
+ASN           : AS15169 Google LLC
+Company       : Google LLC
+Privacy       : {}
+Abuse         : {}
+Domains       : {}
+```
+
+---
+
+## 🛠 **Estructura del proyecto**
+```
+IPTracker/
+├── .env                # Variables de entorno (token de IPinfo)
+├── ip_tracker.py       # Script principal
+├── requirements.txt    # Dependencias
+└── README.md           # Este archivo
+```
+
+---
+
+## 🔍 **¿Por qué esta versión es superior?**
+
+| **Característica**               | **Beneficio**                                                                 |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| **Programación Orientada a Objetos** | Código reutilizable, modular y fácil de integrar en proyectos más grandes.   |
+| **Flexibilidad de argumentos**     | Permite consultar cualquier IP (propia o externa) vía terminal.              |
+| **Manejo de errores**              | Timeouts, fallos de red y errores de API son gestionados sin "explotar".     |
+| **Formato de salida profesional**  | Alineación de textos para una visualización limpia y estructurada.           |
+| **Separación de lógica**           | Métodos independientes para obtener IP y consultar detalles facilitan el mantenimiento. |
+
+---
+
+## 🌐 **APIs utilizadas**
+- [IPinfo](https://ipinfo.io/) - Geolocalización y datos de IPs.
+- [ipify](https://www.ipify.org/) - Obtención de IP pública (fallback si IPinfo no responde).
+
+---
+
+## 📜 **Licencia**
+Este proyecto está bajo la **Licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+## 🤝 **Contribuciones**
+¡Las contribuciones son bienvenidas! Abre un *issue* o envía un *pull request*.
+
+---
+
+## 📧 **Contacto**
+📌 **Autor:** [Tu Nombre](https://github.com/tu-usuario)
+📧 **Email:** tu-email@ejemplo.com
+
+---
+🔒 **Usa el código con precaución.** La geolocalización de IPs debe respetar la privacidad y las leyes locales.
