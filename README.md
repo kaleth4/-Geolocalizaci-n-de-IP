@@ -223,24 +223,7 @@ MIT License - Libre para uso personal y comercial
 
 ---
 
-## 🤝 Contribuciones
 
-¿Encontraste un bug o tienes una idea? ¡Abre un issue o pull request!
 
-```bash
-git checkout -b feature/mi-mejora
-git commit -am "Agrega mi mejora"
-git push origin feature/mi-mejora
-```
-
----
-
-## 📞 Soporte
-
-- 📧 Email: soporte@iptrackerpro.dev
-- 🐙 GitHub Issues: [Reporta aquí](https://github.com/tuusuario/ip-tracker-pro/issues)
-- 💬 Discussions: Comunidad activa
-
----
 
 **Hecho con ❤️ para la comunidad de ciberseguridad**
